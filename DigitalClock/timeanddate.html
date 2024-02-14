@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           margin: 0px 0px 0px 0px;
+        }
+        #head{
+            display: flex;
+            gap: 100px;
+            align-items: center;
+            margin-top:0px; 
+            height: 100vh;
+            background-image: url("https://images.pexels.com/photos/707582/pexels-photo-707582.jpeg?cs=srgb&dl=pexels-cats-coming-707582.jpg&fm=jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+        #ampm{
+            height: 50px;
+            width: 90px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #hour{
+            border: 1px solid black;
+            border-radius: 100px;
+            height: 150px;
+            width: 150px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 2px 2px 20px 2px;
+            margin-left: 20px;
+            background-color:rgb(196,206,217);
+        }
+        #minute{
+            border: 1px solid black;
+            border-radius: 100px;
+            height: 150px;
+            width: 150px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 2px 2px 20px 2px;
+            background-color:rgb(196,206,217);
+        }
+        
+        #Seconds{
+            border: 1px solid black;
+            border-radius: 100px;
+            height: 150px;
+            width: 150px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 2px 2px 20px 2px;
+            background-color:rgb(196,206,217);
+        }
+        #head1{
+            display: flex;
+            gap: 200px;
+            /* justify-content:space-around; */
+            background-image: url("https://www.pixelstalk.net/wp-content/uploads/images8/Free-download-February-2024-Calendar-Wallpaper.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* margin-top: 50px;
+            border: 1px solid black; */
+            height: 100vh;
+            
+        }
+        .top{
+            margin-top: 20px;
+        }
+        .da{
+            margin-left: 40px;
+        }
+        #d1{
+            margin-left: 25px;
+        }
+        #d2{
+            margin-left: 27px;
+        }
+        .alldate{
+            margin-top: 90px;
+            margin-left: 50px;
+        }
+        #bor{
+            border: 2px solid black;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 123%;
+            left: 30px;
+            box-shadow: 2px 2px 20px 2px;
+        }
+        #bor1{
+            border: 2px solid black;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 123%;
+            left: 360px;
+            box-shadow: 2px 2px 20px 2px;
+            
+        }
+        #bor2{
+            border: 2px solid black;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 123%;
+            left: 690px;
+            box-shadow: 2px 2px 20px 2px;
+            
+        }
+        #ampm{
+            position: absolute;
+            left: 39%;
+            top: 400px;
+        }
+        #AmPm{
+            height: 50px;
+            width: 80px;
+            position: absolute;
+            left: 220px;
+            top: 69%;
+        }
+        #alarm{
+            position: absolute;
+            top: 50px;
+        }
+        #audio{
+            display: none;
+        }
+        
+    </style>
+    <script src="https://kit.fontawesome.com/cd57280301.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+   <div id="head">
+   <div id="hour1">
+    <div id="hour" class="c1">
+        <h1 id="Hour" class="top">Hour</h1>
+        <h1 id="text" class="top"></h1>
+    </div>
+   </div>
+    <div id="minute" class="c1">
+       <h1 id="min"  class="top"> Minute</h1>
+       <h1 id="text1" class="top"></h1>
+    </div>
+    <div id="Seconds" class="c1">
+       <h1 id="sec"  class="top">Seconds</h1>
+       <h1 id="text2" class="top"></h1>
+    </div>
+    <div>
+        <select name="" id="ampm">
+           <option value="12H" id="12">12H</option>
+
+           <option value="24H" id="24H">24H  </option>
+        </select>
+        <select name="" id="AmPm">
+            <option value="12" id="12">Am</option>
+ 
+            <option value="24" id="24">Pm  </option>
+         </select>
+      </div>  
+      
+   </div>
+   <div id="head1">
+        <div id="date"  class="alldate">
+            <h1 id="foot">Date</h1>
+            <h1 id="d1"></h1>
+            <h1 id="bor"></h1>
+        </div>
+        <div id="month" class="alldate">
+            <h1 id="foot1">Month</h1>
+            <h1 id="d2"></h1>
+            <h1 id="bor1"></h1>
+
+        </div>
+        <div id="year" class="alldate">
+            <h1 id="foot2">Year</h1>
+            <h1 id="d3"></h1>
+            <h1 id="bor2"></h1>
+        </div>
+        <div>
+            <!-- <form action="" id="alarm">
+                <span>Set An Alarm</span><br><br><i class="fa-solid fa-bell" id="alarm1"></i>
+                <input type="time" value="AlarmTime" id="hours">
+                <h1 id="text"></h1>
+                <button id="submit" type="button">Set Alarm</button>
+            </form> -->
+            <audio src="../mp3/WhatsApp Audio 2024-02-09 at 23.27.17_2f920dc0.mp3" controls id="audio"></audio>
+          </div> 
+   </div>
+
+   <script src="../js/timeanddate.js"></script>
+</body>
+</html>
